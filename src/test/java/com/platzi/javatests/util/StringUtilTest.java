@@ -21,4 +21,21 @@ public class StringUtilTest {
         StringUtil.repeat("hola", -1);
     }
 
+    @Test
+    public void testNotEmpty(){
+        Assert.assertFalse(StringUtil.isEmpty("a"));
+    }
+    @Test
+    public void testEmpty(){
+        Assert.assertTrue(StringUtil.isEmpty(""));
+    }
+    @Test
+    public void testNull(){
+        Assert.assertTrue(StringUtil.isEmpty(null));
+    }
+    @Test
+    public void testBankSpace(){
+        Assert.assertTrue(StringUtil.isEmpty(" "));
+    }
+
 }
